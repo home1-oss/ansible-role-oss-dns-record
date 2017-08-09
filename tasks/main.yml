@@ -1,0 +1,9 @@
+---
+# tasks file for oss-dns-record
+
+- name: DNS record of {{ service }}
+  shell: "{{ item }}"
+  with_items:
+  - "docker exec bind.{{ infrastructure }} recorddel {{ infrastructure }} {{ service }} A"
+  - "docker exec bind.{{ infrastructure }} recordadd {{ infrastructure }} {{ service }} A {{ service_ip }}"
+  sudo: yes
