@@ -1,7 +1,7 @@
 Role Name
 =========
 
-Config dns record `service_ip service.infrastructure` container via `docker exec`.
+Config DNS record `service_ip service.infrastructure` container via `docker exec ...`
 
 Requirements
 ------------
